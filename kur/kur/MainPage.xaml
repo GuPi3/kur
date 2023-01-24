@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kur.MainPage">
+
+    <StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection Title="Наименование заказа">
+                    <EntryCell x:Name="" Label="Сумма заказа"/>
+                    <EntryCell x:Name="" Label="Сумма предоплаты"/>
+                    <EntryCell x:Name="" Label="Стоимость установки"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+        <ListView x:Name="listProduct" ItemTapped="" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Image Source="{Binding}" HeightRequest="45" Aspect="AspectFit"/>
+                        
+                        <StackLayout>
+                            <Label Text="{Binding}" FontSize="18"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding}"/>
+                            </StackLayout>
+                        </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Добавить" Clicked="Button_Add"/>
+    </StackLayout>
+
+</ContentPage>
