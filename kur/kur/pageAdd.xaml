@@ -4,11 +4,16 @@
              x:Class="kur.pageAdd">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Добавить фото" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
-            <Image x:Name="imageAdd" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
             <Label Text="Наименование товара" VerticalOptions="CenterAndExpand" HorizontalOptions ="CenterAndExpand"/>
             <Entry x:Name="nameProduct"/>
             <Label Text="Цена товара" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="sum"/>
+            <Label Text="Цена предоплаты" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="sumPrep"/>
+            <Label Text="Цена установки" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="sumInst"/>
+            <Label Text="Расходы" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Entry x:Name="Expems"/>
             <Button Text="Добавить" Clicked="Button_Add"/>
             <Button Text="Изменить" Clicked="Button_Change"/>
             <Button Text="Удалить" Clicked="Button_Del"/>

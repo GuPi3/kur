@@ -12,7 +12,7 @@ namespace kur
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class pageAdd : ContentPage
     {
-        private product currentProduct {get; set;}
+        private order currentProduct {get; set;}
         public pageAdd()
         {
             InitializeComponent();
@@ -20,7 +20,8 @@ namespace kur
 
         private void Button_Add(object sender, EventArgs e)
         {
-            
+            App.orders.Add(new order { Name = nameProduct.Text, sumOrder = Convert.ToInt32(sum.Text), sumPrepayment = Convert.ToInt32(sumPrep.Text), costInstal = Convert.ToInt32(sumInst.Text), Expemses = Convert.ToInt32(Expems.Text) });
+            Navigation.PopAsync();
         }
 
         private void Button_Change(object sender, EventArgs e)

@@ -4,28 +4,15 @@
              x:Class="kur.MainPage">
 
     <StackLayout>
-        <TableView>
-            <TableRoot>
-                <TableSection Title="Наименование заказа">
-                    <EntryCell x:Name="" Label="Сумма заказа"/>
-                    <EntryCell x:Name="" Label="Сумма предоплаты"/>
-                    <EntryCell x:Name="" Label="Стоимость установки"/>
-                </TableSection>
-            </TableRoot>
-        </TableView>
-        <ListView x:Name="listProduct" ItemTapped="" HasUnevenRows="True">
+        <ListView x:Name="listProduct" ItemTapped="listProduct_ItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Image Source="{Binding}" HeightRequest="45" Aspect="AspectFit"/>
-                        
-                        <StackLayout>
-                            <Label Text="{Binding}" FontSize="18"/>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding}"/>
+
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontSize="18"/>
                             </StackLayout>
-                        </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
