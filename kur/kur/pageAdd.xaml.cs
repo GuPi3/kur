@@ -18,6 +18,13 @@ namespace kur
             InitializeComponent();
         }
 
+        public pageAdd(order Order)
+        {
+            InitializeComponent();
+            nameProduct.Text = Order.Name;
+
+        }
+
         private void Button_Add(object sender, EventArgs e)
         {
             App.orders.Add(new order { Name = nameProduct.Text, sumOrder = Convert.ToInt32(sum.Text), sumPrepayment = Convert.ToInt32(sumPrep.Text), costInstal = Convert.ToInt32(sumInst.Text), Expemses = Convert.ToInt32(Expems.Text) });
@@ -31,7 +38,8 @@ namespace kur
 
         private void Button_Del(object sender, EventArgs e)
         {
-
+            App.orders.Remove(currentProduct);
+            Navigation.PopAsync();
         }
     }
 }

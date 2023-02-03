@@ -17,6 +17,7 @@
             <Button Text="Добавить" Clicked="Button_Add"/>
             <Button Text="Изменить" Clicked="Button_Change"/>
             <Button Text="Удалить" Clicked="Button_Del"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

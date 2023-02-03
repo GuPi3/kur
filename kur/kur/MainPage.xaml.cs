@@ -25,7 +25,7 @@ namespace kur
         private async void listProduct_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var temp = (order)listProduct.SelectedItem;
-            await Navigation.PushAsync(new pageAdd());
+            await Navigation.PushAsync(new pageAdd(temp));
         }
     }
 }
